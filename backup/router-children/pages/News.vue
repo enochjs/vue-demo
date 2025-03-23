@@ -26,18 +26,12 @@ const newsList = reactive([
     <li v-for="news in newsList" :key="news.id">
       <!-- <RouterLink :to="`/news/detail?id=${ news.id }&title=${news.title}&content=${news.content}`">{{ news.title }}</RouterLink> -->
        <RouterLink :to="{
-        // path: `/news/detail/${ news.id }/${ news.title }/${ news.content }`,
-        name: 'Detail',
-        params: {
+        path: '/news/detail',
+        query: {
           id: news.id,
           title: news.title,
           content: news.content
         }
-        // query: {
-        //   id: news.id,
-        //   title: news.title,
-        //   content: news.content
-        // }
        }">{{ news.title }}</RouterLink>
     </li>
   </ul>

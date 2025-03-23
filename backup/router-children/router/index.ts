@@ -27,8 +27,8 @@ const router = createRouter({
       component: () => import('../pages/News.vue'),
       children: [
         {
-          path: 'detail/:id/:title/:content?',
-          name: 'Detail',
+          path: 'detail',
+          name: 'detail',
           component: () => import('../pages/Detail.vue'),
         },
       ],

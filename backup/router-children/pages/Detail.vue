@@ -1,13 +1,13 @@
 <template>
   <ul class="news-list">
     <li>
-      编号：{{ route.params.id }}
+      编号：{{ route.query.id }}
     </li>
     <li>
-      标题：{{  route.params.title }}
+      标题：{{  route.query.title }}
     </li>
     <li>
-      内容：{{ route.params.content }}
+      内容：{{ route.query.content }}
     </li>
   </ul>
 
@@ -17,8 +17,6 @@
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
-
-
 
 </script>
 
