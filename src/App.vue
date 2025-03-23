@@ -1,49 +1,23 @@
 <script setup lang="ts">
-import PersonComp from './components/PersonComp.vue';
-import { onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUnmounted, onUpdated, reactive, ref } from 'vue';
-import type { Person } from './types';
 
-const personList = reactive<Person[]>([
-  { name: '张三', age: 18 },
-  { name: '李四', age: 20 },
-  { name: '王五', age: 22 }
-])
-
-const isShow = ref(true)
-
-const toggle = () => {
-  isShow.value = !isShow.value
-}
-
-onBeforeMount(() => {
-  console.log('parent--onBeforeMount')
-})
-
-onMounted(() => {
-  console.log('parent--onMounted')
-})
-
-onBeforeUpdate(() => {
-  console.log('parent--onBeforeUpdate')
-})
-
-onUpdated(() => {
-  console.log('parent--onUpdated')
-})
-
-onBeforeUnmount(() => {
-  console.log('parent--onBeforeUnmount')
-})
-
-onUnmounted(() => {
-  console.log('parent--onUnmounted')
-})
+import { RouterView , RouterLink} from 'vue-router';
 
 </script>
 
 <template>
-  <PersonComp v-if="isShow" :personList="personList" />
-  <button @click="toggle">点我切换</button>
+
+  <div class="wrapper">
+    <h2>Vue3.2 Composition API</h2>
+    <div class="nav">
+      <RouterLink to="/news" active-class="active"> news </RouterLink>
+      <RouterLink to="/about" active-class="active"> about</RouterLink>
+      <RouterLink to="/home" active-class="active">home</RouterLink>
+    </div>
+    <div class="content">
+      <RouterView />
+
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -51,5 +25,20 @@ onUnmounted(() => {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  a {
+    flex: 1
+  }
+}
+.active {
+  color: #ccc;
+}
+.content {
+  width: 500px;
+  height: 400px;
 }
 </style>
