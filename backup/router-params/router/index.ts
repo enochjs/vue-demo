@@ -30,15 +30,6 @@ const router = createRouter({
           path: 'detail/:id/:title/:content?',
           name: 'Detail',
           component: () => import('../pages/Detail.vue'),
-          // props: true,
-          props: (route) => { // route is the current route
-            return route.params
-            // return {
-            //   id: route.params.id,
-            //   title: route.params.title,
-            //   content: route.params.content,
-            // }
-          }
         },
       ],
     },

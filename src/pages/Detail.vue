@@ -1,22 +1,24 @@
 <template>
   <ul class="news-list">
     <li>
-      编号：{{ route.params.id }}
+      编号：{{ id }}
     </li>
     <li>
-      标题：{{  route.params.title }}
+      标题：{{  title }}
     </li>
     <li>
-      内容：{{ route.params.content }}
+      内容：{{ content }}
     </li>
   </ul>
 
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
+// import { useRoute } from 'vue-router';
 
-const route = useRoute();
+// const route = useRoute();
+
+defineProps(['id', 'title', 'content']);
 
 
 
