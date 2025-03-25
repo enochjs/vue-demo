@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PropsView from '@/pages/props/index.vue'
-import CustomView from '@/pages/custom.vue'
+import CustomView from '@/pages/customEvent/father.vue'
 import MittVue from '@/pages/mitt.vue'
 import PiniaView from '@/pages/pinia.vue'
 import ProviderView from '@/pages/provider.vue'
