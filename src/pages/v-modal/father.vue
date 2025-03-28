@@ -1,30 +1,22 @@
 <template>
   <div class="father">
     <div>
-      父组件
+      <h3>父组件</h3>
+      <!-- <input type="text" v-model="username" /> -->
+      <h3>{{ username }}</h3>
+      <MyInput v-model:username="username" />
+      <!-- <MyInput :modelValue="username" @update:modelValue="username = $event" /> -->
+      <!-- <input type="text" :value="username" @input="username = $event.target?.value" /> -->
+
     </div>
-    <h3>
-      玩具： {{ toy }}
-    </h3>
-    <h3>
-      汽车： {{ car }}
-    </h3>
-    <Child :car="car" @send-toy="getToy" />
+
 
   </div>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import Child from './child.vue';
-
-const car = ref('奔驰');
-const toy = ref('');
-
-const getToy = (value: string) => {
-  console.log('=====getToy=====', value);
-  toy.value = value;
-};
-
+import MyInput from './myInput.vue';
+const username = ref('zhangShan')
 
 
 </script>
