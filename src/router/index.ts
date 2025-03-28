@@ -6,7 +6,7 @@ import PiniaView from '@/pages/pinia.vue'
 import ProviderView from '@/pages/provider.vue'
 import SlotView from '@/pages/slot.vue'
 import VModalView from '@/pages/v-modal/father.vue'
-import AttrView from '@/pages/attrs.vue'
+import AttrView from '@/pages/attrs/parent.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
