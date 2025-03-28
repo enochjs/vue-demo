@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PropsView from '@/pages/props/index.vue'
 import CustomView from '@/pages/customEvent/father.vue'
-import MittVue from '@/pages/mitt.vue'
+import MittVue from '@/pages/mitt/father.vue'
 import PiniaView from '@/pages/pinia.vue'
 import ProviderView from '@/pages/provider.vue'
 import SlotView from '@/pages/slot.vue'
-import VModalView from '@/pages/vModal.vue'
+import VModalView from '@/pages/v-modal/father.vue'
 import AttrView from '@/pages/attrs.vue'
 
 const router = createRouter({
