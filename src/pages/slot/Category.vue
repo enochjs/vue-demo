@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 <!--
 默认插槽
+=======
+>>>>>>> a242c2edbbec820cdd078cf8f49b47c2d745f511
 <template>
 <h3>{{ title }}</h3>
 <div class="content">
@@ -20,6 +23,7 @@ defineProps(['title']);
   margin-bottom: 10px;
   margin-right: 10px;
 }
+<<<<<<< HEAD
 </style> -->
 
 <template>
@@ -43,3 +47,6 @@ defineProps(['title']);
     margin-right: 10px;
   }
   </style>
+=======
+</style>
+>>>>>>> a242c2edbbec820cdd078cf8f49b47c2d745f511
