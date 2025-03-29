@@ -7,6 +7,7 @@ import ProviderView from '@/pages/provider.vue'
 import SlotView from '@/pages/slot.vue'
 import VModalView from '@/pages/v-modal/father.vue'
 import AttrView from '@/pages/attrs/parent.vue'
+import RefsView from '@/pages/refs/father.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +40,11 @@ const router = createRouter({
       path: '/attr',
       name: 'attr',
       component: AttrView,
+    },
+    {
+      path: '/refs',
+      name: 'refs',
+      component: RefsView,
     },
     {
       path: '/pinia',
